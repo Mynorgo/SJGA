@@ -1983,3 +1983,34 @@ body {
     opacity: 1;
   }
 }
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flowers {
+  /* Estilos para las flores, asegúrate de que tengan suficiente espacio */
+  position: relative;
+  z-index: 1; /* Asegúrate de que las flores estén por encima del texto */
+}
+
+.project-name {
+  position: absolute;
+  bottom: 10px; /* Ajusta este valor para separar el texto del borde inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem; /* Tamaño del texto, ajusta según sea necesario */
+  font-weight: bold;
+  color: white; /* Ajusta el color según el fondo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar la legibilidad */
+  animation: fadeIn 2s ease-out; /* Aplica la animación */
+  z-index: 2; /* Asegúrate de que el texto esté por encima de las flores */
+}
